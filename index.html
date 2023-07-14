@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!-- Meta tags -->
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <meta name="autor" content="Andrés Mendoza">
+        <meta name="copyright" content="created by Andrés Mendoza">
+        <meta name="description" content="Peticiones AJAX por medio del objeto Fetch a JSONPlaceholder">
+        <meta name="keywords" content="Andrés Mendoza, Andrés, Mendoza, andres mendoza, andres, mendoza, andresmendoza">
+        <meta name="theme-color" content="#222">
+        <!-- Meta tags Open Graph -->
+        <meta property="og:title" content="JP Fetch">
+        <meta property="og:description" content="Peticiones AJAX por medio del objeto Fetch a JSONPlaceholder">
+        <meta property="og:type" content="website">
+        <meta property="og:img" content="https://andresmendoza.net/...">
+        <meta property="og:url" content="https://andresmendoza.net/...">
+        <!-- Link tags -->
+        <link rel='stylesheet' type='text/css' href='origin/css/normalize.css'>
+        <link rel="stylesheet" type="text/css" href="origin/css/header-styles.css">
+        <link rel="stylesheet" type="text/css" href="origin/css/body-styles.css">
+        <link rel="stylesheet" type="text/css" href="origin/css/footer-styles.css">
+        <link rel="canonical" href="https://andresmendoza.net/">
+        <link rel="icon" href="origin/multimedia/img/favicon.png">
+        <link rel="apple-touch-icon" href="origin/multimedia/img/favicon.png">
+        <script defer src='origin/js/index.js' type="module"></script>
+        <title>JP Fetch</title>
+    </head>
+    <body>
+        <noscript><h2>Es necesario que tengas habilitado JS en tu navegador para acceder a esta página.</h2></noscript>
+        <div class="container">
+            <header class="header">
+                <div class="header-container">
+                    <h1 class="header-container__h1">JSONPlaceholder con Fetch.</h1>
+                </div>
+            </header>
+            <main class="main">
+                <div class="main-container">
+                    <button class="main-container__btn"><img class="main-container__img" title="Dark Mode" alt="Dark Mode"></button>
+                    <p class="main-container__p">Datos de usuarios traídos desde el servidor.</p>
+                    <p class="main-container__p none"></p>
+                    <table class="main-container__table">
+                        <caption class="main-container__caption">Usuarios.</caption>
+                        <thead class="main-container__thead">
+                            <tr class="main-container__tr">
+                                <th class="main-container__th">ID</th>
+                                <th class="main-container__th">Nombre</th>
+                                <th class="main-container__th">Nombre de usuario</th>
+                                <th class="main-container__th">Email</th>
+                            </tr>
+                        </thead>
+                        <tbody class="main-container__tbody">
+                        </tbody>
+                        <tfoot class="main-container__tfoot">
+                            <tr class="main-container__tr">
+                                <th class="main-container__th" colspan="4">Hecho con Fetch.</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </main>
+            <footer class="footer">
+                <div class="footer-container">
+                    <p class="footer-container__p">created by Andrés Mendoza</p>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

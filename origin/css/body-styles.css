@@ -1,0 +1,185 @@
+/* Fluid design by Trys Mudford */
+/* @link https://utopia.fyi */
+
+/* ---------------------------------------- Custom properties ---------------------------------------- */
+:root {
+    --dark-color: #222;
+    --light-color: #fefefe;
+    --vino-color: #451821;
+    --border-dark-color: #ffffce;
+    --table-dark-color: #333;
+}
+
+/* ---------------------------------------- Font size fluid design ---------------------------------------- */
+html {
+    font-size: calc(16px + (20 - 16) * ((100vw - 300px) / (1400 - 300)));
+}
+
+/* ---------------------------------------- User preferences ---------------------------------------- */
+@media (prefers-color-scheme: light) {
+    :root {
+        --bg-color: var(--light-color);
+        --txt-color: var(--dark-color);
+        --border-color: var(--dark-color);
+        --shadow-color: var(--dark-color);
+        --btn-color: var(--vino-color);
+        --table-color: var(--border-dark-color);
+    }
+}
+
+:root.light {
+    --bg-color: var(--light-color);
+    --txt-color: var(--dark-color);
+    --border-color: var(--dark-color);
+    --shadow-color: var(--dark-color);
+    --btn-color: var(--vino-color);
+    --table-color: var(--border-dark-color);
+
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: var(--dark-color);
+        --txt-color: var(--light-color);
+        --border-color: var(--border-dark-color);
+        --shadow-color: var(--light-color);
+        --btn-color: var(--dark-color);
+        --table-color: var(--table-dark-color);
+    }
+}
+
+:root.dark {
+    --bg-color: var(--dark-color);
+    --txt-color: var(--light-color);
+    --border-color: var(--border-dark-color);
+    --shadow-color: var(--light-color);
+    --btn-color: var(--dark-color);
+    --table-color: var(--table-dark-color);
+
+}
+
+/* ---------------------------------------- Fonts ---------------------------------------- */
+@font-face {
+    font-family: "Figtree";
+    src: url(../fonts/Figtree.ttf);
+}
+
+/* ---------------------------------------- Body styles ---------------------------------------- */
+.none {
+    display: none;
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+.main-container {
+    position: relative;
+}
+
+.main-container__btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.7rem;
+    height: 1.7rem;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--btn-color);
+    transition: background-color 0.3s ease-in;
+}
+
+.main-container__img {
+    width: 60%;
+}
+.main-container__p {
+    padding-top: 3.5rem;
+    color: var(--txt-color);
+    font-family: "Figtree", "Tahoma";
+    text-align: center;
+}
+
+.main-container__caption {
+    color: var(--txt-color);
+    font-family: "Figtree", "Tahoma";
+    margin-bottom: 0.5rem;
+}
+
+.main-container__table {
+    border-collapse: collapse;
+    margin: 1rem auto;
+    box-shadow: 0px 0px 7px var(--shadow-color);
+}
+
+.main-container__thead {
+    display: none;
+}
+
+.main-container__td, .main-container__th {
+    display: block;
+    font-family: "Figtree", "Tahoma";
+    padding: 0.5rem 1rem;
+}
+
+.main-container__td {
+    color: var(--txt-color);
+    display: grid;
+}
+
+.main-container__th {
+    color: var(--light-color);
+    background-color: var(--vino-color);
+}
+
+/* ---------------------------------------- Pseudo classes ---------------------------------------- */
+.main-container__btn:hover {
+    background-color: var(--light-color);
+}
+
+.main-container__tr:nth-of-type(2n) {
+    background-color: var(--table-color);
+}
+
+/* ---------------------------------------- Pseudo elements ---------------------------------------- */
+.main-container__td::before {
+    content: attr(data-td) ": ";
+    font-weight: bold;
+}
+
+
+/* ---------------------------------------- Media queries ---------------------------------------- */
+@media screen and (min-width: 30rem) {
+    .main-container__thead {
+        display: table-header-group;
+    }
+
+    .main-container__td, .main-container__th {
+        display: table-cell; 
+        text-align: center;
+        border: 1px solid var(--border-color);
+        padding: 0.2rem;
+    }
+
+    .main-container__td::before {
+        content: none;
+    }
+    
+    .footer {
+        position: fixed;
+        bottom: 0px;
+    }
+}
+
+
+
+
+
+
+
+
+
+

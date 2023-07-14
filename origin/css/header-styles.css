@@ -1,0 +1,19 @@
+/* ---------------------------------------- Header styles ---------------------------------------- */
+.header {
+    background-color: var(--vino-color);
+    width: 100%;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.header-container {
+    padding: 0.5rem;
+}
+
+.header-container__h1 {
+    color: var(--light-color);
+    font-family: "Figtree", "Tahoma";
+    font-size: 1rem;
+    text-align: center;
+}
+
+
